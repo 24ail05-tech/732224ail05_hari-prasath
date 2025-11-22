@@ -1,1 +1,1 @@
-![alt text](/images/schedule trigger.png)
+![alt text](/images/scheduletrigger.png)
