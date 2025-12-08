@@ -1,1 +1,124 @@
+STEP 1: Install Docker
+
+Go to:
+https://www.docker.com/products/docker-desktop/
+Download and install Docker Desktop for:
+
+Windows
+
+Mac
+
+Linux (use Docker Engine)
+
+
+After installing, open Docker Desktop.
+
+
+---
+
+STEP 2: Check if Docker Works
+
+Open terminal / command prompt and type:
+
+docker --version
+
+You should see a version number like Docker version 27.x.x.
+
+
+---
+
+STEP 3: Run Your First Docker Container
+
+Type:
+
+docker run hello-world
+
+If it prints
+“Hello from Docker!”
+→ Docker is working perfectly.
+
+
+---
+
+STEP 4: Check Your Containers
+
+List running containers:
+
+docker ps
+
+List all containers:
+
+docker ps -a
+
+
+---
+
+STEP 5: Download an Image
+
+Example: pull the official Node.js image:
+
+docker pull node
+
+
+---
+
+STEP 6: Create a Simple Container
+
+Example: run Node in a container:
+
+docker run -it node
+
+This opens a terminal inside the container.
+
+
+---
+
+STEP 7: Create a Dockerfile (For Your App)
+
+In your project folder, create a file called Dockerfile:
+
+FROM node:18
+WORKDIR /app
+COPY . .
+RUN npm install
+CMD ["node", "app.js"]
+
+This tells Docker how to build your app.
+
+
+---
+
+STEP 8: Build Your Image
+
+In the project folder:
+
+docker build -t myapp .
+
+(This creates an image named myapp)
+
+
+---
+
+STEP 9: Run Your App Container
+
+docker run -p 3000:3000 myapp
+
+Now your app runs inside Docker and exposes port 3000.
+
+
+---
+
+STEP 10: Stop and Remove Containers
+
+Stop all running containers:
+
+docker stop $(docker ps -q)
+
+Remove all containers:
+
+docker rm $(docker ps -aq)
+
+Remove all images:
+
+docker rmi $(docker images -q)
 
