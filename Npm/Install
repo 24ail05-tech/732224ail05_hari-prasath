@@ -1,1 +1,104 @@
+STEP 1: Install Node.js
 
+Go to nodejs.org
+
+Download LTS (Recommended)
+
+Install it
+(Node includes npm automatically)
+
+
+
+---
+
+STEP 2: Open Your Terminal
+
+Use any of these:
+
+Command Prompt (Windows)
+
+PowerShell
+
+Terminal (Mac / Linux)
+
+
+
+---
+
+STEP 3: Check if Node & npm are installed
+
+Type:
+
+node -v
+npm -v
+
+If you get version numbers → you’re ready.
+
+
+---
+
+STEP 4: Create Your Project Folder
+
+mkdir myproject
+cd myproject
+
+
+---
+
+STEP 5: Initialize npm (Create package.json)
+
+npm init -y
+
+
+---
+
+STEP 6: Install a Package
+
+Type:
+
+npm install express
+
+(You can install any package, not only express)
+
+This creates:
+
+node_modules folder
+
+Adds dependency inside package.json
+
+
+
+---
+
+STEP 7: Install Developer Tools (Optional)
+
+For testing, linting, etc.
+
+npm install --save-dev nodemon
+
+
+---
+
+STEP 8: Install All Dependencies (When starting a project you cloned)
+
+If someone gave you a project:
+
+npm install
+
+This reads package.json and installs everything.
+
+
+---
+
+STEP 9: Run Your App (Example)
+
+If your file is app.js:
+
+node app.js
+
+
+---
+
+STEP 10: Uninstall a Package
+
+npm uninstall express
